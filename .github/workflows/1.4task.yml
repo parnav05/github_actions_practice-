@@ -1,0 +1,20 @@
+name: two jobs
+
+on:
+  workflow_call:
+    
+
+jobs:
+  job_A:
+    name: job_A
+    runs-on: ubuntu-latest
+    steps:
+      - name:  print joba_a
+        run: echo "I am Job A"
+
+  job_B:
+    name: job_B
+    runs-on: ubuntu-latest
+    steps:
+      - name:  print joba_b
+        run: echo "I am Job B"

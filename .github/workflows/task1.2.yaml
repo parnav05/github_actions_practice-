@@ -1,9 +1,8 @@
 name: System Info
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    
 
 jobs:
   System-Info:
@@ -23,5 +22,5 @@ jobs:
         run: df -h
         
       - name: monitering 
-        run: top 
+        run: top -b -n 1
       

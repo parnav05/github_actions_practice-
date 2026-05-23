@@ -1,9 +1,7 @@
 name: task1.1
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
 
 jobs:
   ci-integrated :
