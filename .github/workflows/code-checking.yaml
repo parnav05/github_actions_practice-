@@ -2,19 +2,19 @@ name: task1.1
 
 on:
   push:
-    beanch:
-      main
+    branches:
+      - main
 
 jobs:
   ci-integrated :
     name: pragya ka sikhaya hua pehla task
     runs-on: ubuntu:latest
     steps:
-      name: cistarted
-      run: echo "cistarted"
+      - name: cistarted
+        run: echo "cistarted"
 
-      name: OS info
-      run:  uname -a
+      - name: OS info
+        run:  uname -a
     
     
 
