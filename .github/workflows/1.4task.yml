@@ -2,6 +2,9 @@ name: two jobs
 
 on:
   workflow_call:
+  push:
+    branches:
+      main    
     
 
 jobs:
