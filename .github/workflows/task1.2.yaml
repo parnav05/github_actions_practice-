@@ -21,6 +21,7 @@ jobs:
 
       - name:  print disk space
         run: df -h
-      - name:
+        
+      - name: monitering 
         run: top 
       
