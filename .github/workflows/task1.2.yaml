@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: print input parameter
-        Deploying to: ${{ inputs.environment }}
+        run: "Deploying to: ${{ inputs.environment }}"
 
 
     
