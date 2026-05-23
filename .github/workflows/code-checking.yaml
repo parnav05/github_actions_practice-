@@ -8,7 +8,7 @@ on:
 jobs:
   ci-integrated :
     name: pragya ka sikhaya hua pehla task
-    runs-on: ubuntu latest
+    runs-on: ubuntu-latest
     steps:
       - name: cistarted
         run: echo "cistarted"
