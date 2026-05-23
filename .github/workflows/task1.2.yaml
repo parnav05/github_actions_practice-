@@ -2,35 +2,22 @@ name: System Info
 
 on:
   workflow_call:
-  push:
-    branches:
-      main
-    
+  workflow_dispatch:
+     
 
 jobs:
   System-Info:
     name: task1.2
     runs-on: ubuntu-latest
 
+    environment: staging
+
     steps:
-
-      - name: print current user
-        run: whoami
-
-      - name: print hostname
-        run: hostname
-
-      - name: print available memory
-        run: free -h
+      - name: print input parameter
+        Deploying to: ${{ inputs.environment }}
 
 
-      - name: monitering 
-        run: top
-        continue-on-error: true
-
-
-      - name:  print disk space
-        run: df -h
+    
         
   
       
