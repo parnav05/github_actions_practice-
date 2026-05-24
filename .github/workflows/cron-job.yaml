@@ -20,8 +20,8 @@ jobs:
         run: echo "Good morning, team!"
 
       - name: company name
-        run: echo "${COMPANY}"
+        run: echo "${{ env.COMPANY }}"
 
       - name: version name 
-        run: echo "${VERSION}"
+        run: echo "${{ env.VERSION }}"
 
