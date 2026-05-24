@@ -2,7 +2,7 @@ name: cron job
 
 on:
   schedule:
-    - cron: '31 11 * * 1-5'
+    - cron: '33 11 * * 1-7'
 
 jobs:
   cron_job:
