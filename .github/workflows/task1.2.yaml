@@ -4,24 +4,36 @@ on:
   workflow_call:
   workflow_dispatch:
     inputs:
-      environments:
-        description: "select the Environment"
-        type: choice 
+      app_name:
+        description: "give it a suitable app name "
+        type: string 
         required: true
-        options: 
-          - staging
-          - production
         
-  
-
+      replicas:
+        description: "update replicas no "
+        type:  numbers
+        default: 2
+        
+      debug_mode:
+        description: "update debug_mode"
+        type: boolean
+         
+        
+        
 jobs:
-  input_parameter:
-    name: task1.2
+  input-parameter:
+    name: input parameters
     runs-on: ubuntu-latest
 
     steps:
-      - name: print input parameter
-        run: echo "Deploying to ${{ inputs.environments }}"
+      - name: print app_name
+        run: echo "app name is ${{ inputs.app_name }}"
+
+      - name: replicas
+        run: echo " ${{ inputs.replicas }}"
+
+      - name: debug_mode
+        run: echo " ${{ inputs.debug_mode }}"
 
 
     
