@@ -1,9 +1,14 @@
 name: cron job
 
 on:
-  schedule:
-    - cron: '04 12 * * 1-7'
-      timezone: "Asia/Kolkata"
+  push:
+    branches:
+      main
+
+env:
+
+  COMPANY: Acme
+  VERSION: 1.0
 
 
 jobs:
@@ -13,3 +18,10 @@ jobs:
     steps:
       - name: print greet
         run: echo "Good morning, team!"
+
+      - name: company name
+        run: echo "${COMPANY}"
+
+      - name: version name 
+        run: echo "${VERSION}"
+
