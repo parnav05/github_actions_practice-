@@ -1,0 +1,26 @@
+
+# Create a matrix job that tests on `ubuntu-20.04`, `ubuntu-22.04`, and `ubuntu-latest`. Install `tree` using `apt-get` 
+# and run `tree /usr/bin | head -20`. Note version differences.
+
+name: matrix-Strategy
+
+on:
+  push:
+    branches:
+      main
+
+
+jobs:
+  test:
+    Strategy:
+      matrix: 
+        os: [ubuntu-20.04,ubuntu-20.04,ubuntu-latest ]
+  
+    runs-on: ${{matrix.os}}
+
+    steps:
+      - name: Install `tree`
+        run:  sudo apt update && sudo apt install tree 
+
+      - name: run command 
+        run: tree /usr/bin | head -20
