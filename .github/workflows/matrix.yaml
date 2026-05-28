@@ -13,13 +13,14 @@ on:
 jobs:
   test:
     strategy:
+      fail-fast: false
       matrix: 
-        os: [ ubuntu-latest, macOS ]
-        node-version: [18,20]
+        os: [ ubuntu-latest]
+        node-version: [18,20,50]
     runs-on: ${{matrix.os}}
 
     steps:
-      - name: Testing Node
+      - name: Testing N
         run: echo " Testing Node ${{ matrix.node-version }} on ${{ matrix.os }} "
 
       
