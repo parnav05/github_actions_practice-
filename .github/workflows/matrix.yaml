@@ -14,13 +14,15 @@ jobs:
   test:
     strategy:
       matrix: 
-        os: [ubuntu-20.04,ubuntu-20.04,ubuntu-latest ]
-  
+        os: [ ubuntu-latest, macOS ]
+        node-version: [18,20]
     runs-on: ${{matrix.os}}
 
     steps:
-      - name: Install `tree`
-        run:  sudo apt update && sudo apt install tree 
+      - name: Testing Node
+        run: echo " Testing Node ${{ matrix.node-version }} on ${{ matrix.os }} "
 
-      - name: run command 
-        run: tree /usr/bin | head -20
+      
+
+       #Create a matrix strategy that combines `os` and `node-version` (e.g., Node 18 and 20 on both Ubuntu and macOS). 
+        #That gives 4 combinations. Print `"Testing Node ${{ matrix.node-version }} on ${{ matrix.os }}"`
