@@ -23,7 +23,7 @@ jobs:
      - name: build and push
        uses: docker/build-push-action@v7
        with:
-         context: .
+         context: ./frontend
          push: true
          tags: |
             ${{vars.DOCKERHUB_USERNAME}}/github-actions-app:latest
