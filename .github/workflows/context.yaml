@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print GitHub Context
-        run: echo " build ${{ github.run_number }} on $date " | GITHUB_OUTPUT
+        run: build ${{ github.run_number }} on $date | GITHUB_OUTPUT
       - name: print output
         run: echo $GITHUB_OUTPUT
 
