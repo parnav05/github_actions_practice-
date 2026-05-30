@@ -1,0 +1,13 @@
+name: context
+
+on:
+  push:
+    branchs:
+      main
+
+jobs:
+  context:
+    runs-on: ununtu-latest
+    steps:
+      - name: Print GitHub Context
+        run: echo '${{ toJSON(github) }}'
