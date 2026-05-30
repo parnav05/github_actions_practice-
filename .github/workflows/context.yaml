@@ -7,7 +7,7 @@ on:
 
 jobs:
   context:
-    runs-on: ununtu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print GitHub Context
         run: echo '${{ toJSON(github) }}'
